@@ -3,5 +3,5 @@ use c::C;
 
 fn main() {
     let storage = b::init_storage::<C>(0);
-    c::read_storage::<B, C>(storage)
+    c::read_storage::<B>(storage)
 }
