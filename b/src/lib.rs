@@ -7,7 +7,7 @@ trait Id {
 }
 
 impl<T> Id for T {
-    type Assoc =T;
+    type Assoc = T;
 }
 
 pub struct B;
@@ -16,7 +16,5 @@ impl<T> Foreign<B, T> for <T as Id>::Assoc {
 }
 
 pub fn init_storage<T: 'static>(x: usize) -> Box<dyn Any> {
-    Box::new(Storage::<T, B, T> {
-        inner: x,
-    })
+    Box::new(Storage::<T, B, T> { inner: x })
 }
